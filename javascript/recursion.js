@@ -26,7 +26,7 @@ console.log(countListItems([])) // 0
  */
 
 const getMin = (arr) => {
-    if (arr.length === 1) return arr[0]
+    if (arr.length < 2) return arr[0]
     
     let left = arr[0]
     let right = getMin(arr.slice(1))

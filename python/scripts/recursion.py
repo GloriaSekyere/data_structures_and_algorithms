@@ -17,7 +17,7 @@ def count_list_items(arr):
 
 
 def get_max(arr):
-    if len(arr) == 1:
+    if len(arr) < 2:
         return arr[0]
     left = arr[0]
     right = get_max(arr[1:])
