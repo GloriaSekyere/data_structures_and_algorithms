@@ -45,3 +45,21 @@ def test_count_list_items_empty_array():
     arr = []
     res = re.count_list_items(arr)
     assert res == 0
+
+
+def test_get_max():
+    arr = [8, 22, 3, 0, 19, 2]
+    res = re.get_max(arr)
+    assert res == 22
+
+
+def test_get_max_single_item():
+    arr = [4]
+    res = re.get_max(arr)
+    assert res == 4
+
+
+def test_get_max_equal_items():
+    arr = [5, 5]
+    res = re.get_max(arr)
+    assert res == 5

@@ -14,3 +14,11 @@ def count_list_items(arr):
     if not arr:
         return 0
     return 1 + count_list_items(arr[1:])
+
+
+def get_max(arr):
+    if len(arr) == 1:
+        return arr[0]
+    left = arr[0]
+    right = get_max(arr[1:])
+    return left if left > right else right

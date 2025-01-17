@@ -24,3 +24,18 @@ console.log(countListItems(['a', 'b', 'c', 'd', 'e'])) // 5
 console.log(countListItems(['e'])) // 1
 console.log(countListItems([])) // 0
  */
+
+const getMin = (arr) => {
+    if (arr.length === 1) return arr[0]
+    
+    let left = arr[0]
+    let right = getMin(arr.slice(1))
+    
+    return left < right ? left : right
+}
+
+/* TESTS
+console.log(getMin([8, 12, 3, 0, 19, 2])) // 0
+console.log(getMin([4])) // 4
+console.log(getMin([5, 5])) // 5
+*/
