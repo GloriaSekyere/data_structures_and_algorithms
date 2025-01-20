@@ -22,3 +22,21 @@ def get_max(arr):
     left = arr[0]
     right = get_max(arr[1:])
     return left if left > right else right
+
+
+def binary_search(arr, num):
+    if len(arr) == 0:
+        return None
+
+    if len(arr) == 1:
+        return arr[0] if arr[0] == num else None
+
+    mid = len(arr) // 2
+    guess = arr[mid]
+
+    if guess == num:
+        return guess
+    elif guess < num:
+        return binary_search(arr[mid + 1 :], num)
+    elif guess > num:
+        return binary_search(arr[:mid], num)

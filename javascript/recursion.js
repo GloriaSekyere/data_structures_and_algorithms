@@ -39,3 +39,36 @@ console.log(getMin([8, 12, 3, 0, 19, 2])) // 0
 console.log(getMin([4])) // 4
 console.log(getMin([5, 5])) // 5
 */
+
+
+const binarySearch = (arr, num) => {
+    if (arr.length === 0) {
+        return null
+    }
+
+    if (arr.length === 1) {
+        if (arr[0] == num) {
+            return arr[0]
+        }
+        return null
+    }
+
+    let mid = Math.floor(arr.length / 2)
+    let guess = arr[mid]
+
+    if (guess ===  num) {
+        return guess
+    } else if (guess < num) {
+        return binarySearch(arr.slice(mid+1), num)
+    } else if (guess > num) {
+        return binarySearch(arr.slice(0, mid), num)
+    }
+}
+
+/* TESTS
+console.log(binarySearch([1, 2, 3, 4, 5], 4)) // 4
+console.log(binarySearch([1, 2, 3, 4, 5], 8)) // null
+console.log(binarySearch([1], 1)) // 1
+console.log(binarySearch([1], 5)) // null
+console.log(binarySearch([], 13)) // null
+*/

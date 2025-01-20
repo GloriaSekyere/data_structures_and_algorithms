@@ -63,3 +63,38 @@ def test_get_max_equal_items():
     arr = [5, 5]
     res = re.get_max(arr)
     assert res == 5
+
+
+def test_binary_search_num_exists():
+    arr = [1, 2, 3, 4, 5]
+    num = 4
+    res = re.binary_search(arr, num)
+    assert res == 4
+
+
+def test_binary_search_num_does_not_exist():
+    arr = [1, 2, 3, 4, 5]
+    num = 8
+    res = re.binary_search(arr, num)
+    assert res == None
+
+
+def test_binary_search_single_item_num_exists():
+    arr = [1]
+    num = 1
+    res = re.binary_search(arr, num)
+    assert res == 1
+
+
+def test_binary_search_single_item_num_does_not_exist():
+    arr = [1]
+    num = 5
+    res = re.binary_search(arr, num)
+    assert res == None
+
+
+def test_binary_search_empty_array():
+    arr = []
+    num = 13
+    res = re.binary_search(arr, num)
+    assert res == None
