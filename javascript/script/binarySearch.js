@@ -1,4 +1,8 @@
-function binarySearch(arr, num) {
+function binarySearch (arr, num) {
+    if (arr.length === 0) {
+        return -1
+    }
+    
     let low = 0
     let high = arr.length - 1
 
@@ -18,5 +22,4 @@ function binarySearch(arr, num) {
     return -1
 }
 
-const arr = [1, 2, 3,4, 5]
-console.log(binarySearch(arr, 5))
+module.exports = binarySearch

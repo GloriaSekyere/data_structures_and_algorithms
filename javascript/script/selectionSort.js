@@ -25,4 +25,4 @@ function selectionSort(arr) {
     return resultArr
 }
 
-console.log(selectionSort([4, 9, 12, 2, 0, 8]))
+module.exports = selectionSort
