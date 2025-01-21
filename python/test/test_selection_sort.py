@@ -1,4 +1,4 @@
-from scripts.selection_sort import selection_sort
+from script.selection_sort import selection_sort
 
 
 def test_selection_sort():

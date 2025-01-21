@@ -1,4 +1,4 @@
-from scripts.binary_search import binary_search
+from script.binary_search import binary_search
 
 
 def test_binary_search_low_number_exsits():

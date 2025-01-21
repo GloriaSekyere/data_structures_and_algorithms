@@ -1,4 +1,4 @@
-import scripts.recursion as re
+import script.recursion as re
 
 
 def test_factorial():
