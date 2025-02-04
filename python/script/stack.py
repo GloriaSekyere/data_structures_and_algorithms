@@ -1,29 +1,6 @@
-# stack implementation with python list
-class Stack:
-    def __init__(self):
-        self.stack = []
-
-    def push(self, data):
-        self.stack.append(data)
-
-    def pop(self):
-        if self.isEmpty():
-            return "Stack is empty"
-        return self.stack.pop()
-
-    def peek(self):
-        if self.isEmpty():
-            return "Stack is empty"
-        return self.stack[-1]
-
-    def isEmpty(self):
-        return len(self.stack) == 0
-
-    def size(self):
-        return len(self.stack)
+# Stack implementation with Singly Linked List
 
 
-# stack implementation with singly linked list
 class Node:
     def __init__(self, data):
         self.data = data
@@ -60,3 +37,29 @@ class Stack:
 
     def stack_size(self):
         return self.size
+
+
+# Stack implementation with Python list
+
+# class Stack:
+#     def __init__(self):
+#         self.stack = []
+
+#     def push(self, data):
+#         self.stack.append(data)
+
+#     def pop(self):
+#         if self.isEmpty():
+#             return "Stack is empty"
+#         return self.stack.pop()
+
+#     def peek(self):
+#         if self.isEmpty():
+#             return "Stack is empty"
+#         return self.stack[-1]
+
+#     def isEmpty(self):
+#         return len(self.stack) == 0
+
+#     def size(self):
+#         return len(self.stack)

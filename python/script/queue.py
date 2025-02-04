@@ -1,29 +1,4 @@
-# qeueue implementation with python list
-class Queue:
-    def __init__(self):
-        self.queue = []
-
-    def enqueue(self, value):
-        self.queue.append(value)
-
-    def dequeue(self):
-        if self.isEmpty():
-            return "Queue is empty"
-        return self.queue.pop(0)
-
-    def peek(self):
-        if self.isEmpty():
-            return "Queue is empty"
-        return self.queue[0]
-
-    def isEmpty(self):
-        return len(self.queue) == 0
-
-    def size(self):
-        return len(self.queue)
-
-
-# queue implementation with a singly linked list
+# Queue implementation with a Singly Linked List
 class Node:
     def __init__(self, data):
         self.data = data
@@ -75,3 +50,28 @@ class Queue:
 
     def queue_size(self):
         return self.size
+
+
+# Qeueue implementation with Python list
+# class Queue:
+#     def __init__(self):
+#         self.queue = []
+
+#     def enqueue(self, value):
+#         self.queue.append(value)
+
+#     def dequeue(self):
+#         if self.isEmpty():
+#             return "Queue is empty"
+#         return self.queue.pop(0)
+
+#     def peek(self):
+#         if self.isEmpty():
+#             return "Queue is empty"
+#         return self.queue[0]
+
+#     def isEmpty(self):
+#         return len(self.queue) == 0
+
+#     def size(self):
+#         return len(self.queue)
